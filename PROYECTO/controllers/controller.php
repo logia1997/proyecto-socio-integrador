@@ -60,31 +60,36 @@
 			if (isset($_POST["occion"])){
 				$datosC = $_POST["occion"];
 
+				
+
 				$respuesta = Datos::permisosModel($datosC, "usuario");
 				$permiso = Datos::tipoPermisoModel($datosC, "permiso");
 				$i=0;
 
-				echo "	<table>
-							<thead>
+				echo "	<div class='contenedor_tabla'>
+				<table class='lista_usuarios'>
+							<thead class='.cabecera2'>
 								<tr>
-									<th>Usuario</th>
-									<th>Contraseña</th>
-									<th>
+									<td>Usuario</td>
+									<td>Contraseña</td>
+									<td>Tipo de usuario</td>
+									<td>
 										<a href='index.php?action=agregar&id=".$datosC."&permiso=".$permiso [$i][0]."' title='Agregar'>
-											<img src='views/css/mas.png' class='icono'>
+										<img src='views/css/mas.png' class='icono'>
 										</a>
-									</th>
+									</td>
 								</tr>
 							</thead>
 							<tbody>";
 				while ($i < count($respuesta)){ 
 					echo "
 								<tr>
-									<td>".$respuesta [$i][1]."</td>
+									<td>".$respuesta [$i][1]. "</td>
 									<td>".$respuesta [$i][2]."</td>
+									<td>".$respuesta [$i][3]."</td>
 									<td>
-										<a href='index.php?action=editar&id=".$respuesta [$i][0]."&user=".$respuesta [$i][1]."&pass=".$respuesta [$i][2]."&permiso=".$respuesta [$i][3]."' title='Editar'>
-											<img src='views/css/editar.png' class='icono'>
+										<a href='index.php?action=editar&id=".$respuesta [$i][0]."&user=".$respuesta [$i][1]."&pass=".$respuesta [$i][2]."&permiso=".$respuesta [$i][3]."' title='Editar'>	
+										<img src='views/css/editar.png' class='icono'>
 										</a>";
 					if ($respuesta [$i][0] != 1) {
 						echo "			| <a href='index.php?action=eliminar&id=".$respuesta [$i][0]."&user=".$respuesta [$i][1]."&permiso=".$respuesta [$i][3]."' title='Eliminar'>
@@ -96,7 +101,9 @@
 					$i++;
 				}
 				echo "		</tbody>
-						</table>";
+						</table>
+						</div>";
+						
 					
 			}
 		}
