@@ -16,7 +16,7 @@
 
 		public static function permisosModel($datosmodel, $tabla){
 
-			$stmt = Conexion::conectar()->prepare("SELECT a.id, a.usuario, a.password, b.permiso FROM $tabla a inner join permiso b on a.idPermiso=b.id WHERE b.id = $datosmodel");
+			$stmt = Conexion::conectar()->prepare("SELECT a.id, a.usuario, a.password, b.permiso FROM $tabla a inner join permiso b on a.idPermiso=b.id ");
 			
 			$stmt -> execute();
 
