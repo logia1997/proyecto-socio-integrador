@@ -44,6 +44,9 @@
 
 					$_SESSION['id'] = $respuesta["id"];
 					header("location:index.php?action=".$respuesta["permiso"]);
+					
+					
+			
 
 				}else{
 
