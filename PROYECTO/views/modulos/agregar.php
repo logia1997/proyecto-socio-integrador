@@ -5,6 +5,7 @@
 	if (isset($idUsuario)){
 		$permiso = $_GET["permiso"];
 		$id = $_GET["id"];
+		
 ?>
 
 <h1>Agregar un nuevo <?php echo $permiso; ?>.</h1>
@@ -21,7 +22,13 @@
 	<label>Permiso:</label>
 	<br>
 	<select name="Permiso">
-		<option value="<?php echo $id;?>"><?php echo $permiso; ?></option>
+		<option value="1">Administrador</option>
+		<option value="7">Jefe de calle</option>
+		<option value="3">Agua</option>
+		<option value="4">CLAP</option>
+		<option value="5">Foro</option>
+		<option value="6">Gas</option>
+		
 	</select>
 	<div id="cajaBoton">
 	<input type="submit" value="Crear" class="letra boton" name="boton">
@@ -32,6 +39,7 @@
 	@import "views/css/newadmin.css";
 </style>
 <?php 
+
 
  	$agregar = new MvcController();
 	$agregar -> adminController();
