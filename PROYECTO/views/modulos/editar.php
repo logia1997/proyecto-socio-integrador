@@ -26,7 +26,7 @@
 	<label>Permiso:</label>
 	<br>
 	<select name="Permiso">
-		<option value="1" <?php if ($permiso == "Master") { echo "selected";} ?>>Master</option>
+		<option value="1" <?php if ($permiso == "Master") { echo "selected";} ?>>Administrador</option>
 		<option value="3" <?php if ($permiso == "Agua") { echo "selected";} ?>>Agua</option>
 		<option value="4" <?php if ($permiso == "Clap") { echo "selected";} ?>>Clap</option>
 		<option value="5" <?php if ($permiso == "Gas") { echo "selected";} ?>>Gas</option>
