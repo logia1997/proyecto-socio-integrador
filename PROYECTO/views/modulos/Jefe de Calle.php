@@ -6,11 +6,8 @@
 		$agregar = new MvcController();
 		$agregar -> usuarioController();
 ?>
-
 <h1>Crear un nuevo Usuario.</h1>
-
 <form method="post">
-
 	<h2>Usuario:</h2>
 	<div class="linea"></div>
 	<br>

@@ -22,7 +22,6 @@
 	<label>Permiso:</label>
 	<br>
 	<select name="Permiso">
-		<option value="1">Administrador</option>
 		<option value="7">Jefe de calle</option>
 		<option value="3">Agua</option>
 		<option value="4">CLAP</option>

@@ -10,6 +10,7 @@
 
 
    <?php 
+
       $_POST["occion"] =1;
         $ingreso = new MvcController();
         $ingreso -> permisosController();

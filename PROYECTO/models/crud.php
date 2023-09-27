@@ -78,8 +78,9 @@
 
 		public static function usuarioModel($datosmodel, $tabla){
 
-			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla ( usuario, password, idPermiso, IdSector) VALUES (:usua,:pass,:permi,:setr)");
-
+			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla ( usuario, password, idPermiso, IdSector) 
+			VALUES (:usua,:pass,:permi,:setr)");
+			
 			$stmt-> bindParam(":usua", $datosmodel["usuario"], PDO::PARAM_STR);
 			$stmt-> bindParam(":pass", $datosmodel["password"], PDO::PARAM_STR);
 			$stmt-> bindParam(":permi", $datosmodel["permiso"], PDO::PARAM_STR);

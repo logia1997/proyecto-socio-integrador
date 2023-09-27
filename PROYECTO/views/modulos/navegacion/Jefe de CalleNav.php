@@ -6,3 +6,4 @@
 	<li><a href="index.php?action=salir">Salir</a></li>
 
 </ul> 
+

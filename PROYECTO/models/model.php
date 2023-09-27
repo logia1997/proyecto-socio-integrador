@@ -21,7 +21,21 @@
 				$enlacesModel == "editarjefe" ||
 				$enlacesModel == "eliminarjefe" ||
 				$enlacesModel == "peticiones" ||
-				$enlacesModel == "Usuario" ){
+				$enlacesModel == "Agua" ||
+				$enlacesModel == "Clap" ||
+				$enlacesModel == "Gas" ||
+				$enlacesModel == "proceso_pago_agua" ||
+				$enlacesModel == "proceso_pago_gas" ||
+				$enlacesModel == "proceso_pago_clap" ||
+				$enlacesModel == "informacion_clap" ||
+				$enlacesModel == "informacion_gas" ||
+				$enlacesModel == "historial_clap" ||
+				$enlacesModel == "historial_gas" ||
+				$enlacesModel == "agua_usuario" ||
+				$enlacesModel == "gas_usuario" ||
+				$enlacesModel == "clap_usuario" ||
+				$enlacesModel == "pago_usuario" ||
+				$enlacesModel == "Usuario"){
 				
 					$module = "views/modulos/".$enlacesModel.".php";
 

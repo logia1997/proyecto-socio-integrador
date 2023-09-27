@@ -23,7 +23,11 @@
 					if ($_GET["action"] == "login" ||
 						$_GET["action"] == "Master" ||
 						$_GET["action"] == "Jefe de Calle" ||
-						$_GET["action"] == "Usuario"){
+						$_GET["action"] == "Usuario" ||
+						$_GET["action"] == "Agua"  ||
+						$_GET["action"] == "Clap" ||
+						$_GET["action"] == "Gas" 
+						){
 						
 						$enlaces = $_GET["action"];
 
@@ -42,8 +46,25 @@
 						     $_GET["action"] == "editarjefe" || 
 						     $_GET["action"] == "eliminarjefe" || 
 						     $_GET["action"] == "peticiones" ){
-						$enlaces = "Jefe de Calle";
-					}else{
+						     $enlaces = "Jefe de Calle";
+					}else if ($_GET["action"] == "proceso_pago_agua") {
+			                 $enlaces = "Agua";
+					}else if ($_GET["action"] == "proceso_pago_gas" || 
+				        	  $_GET["action"] == "historial_gas" || 
+				          	  $_GET["action"] == "informacion_gas"){
+						      $enlaces = "Gas"; 
+					}else if ($_GET["action"] == "proceso_pago_clap" || 
+							  $_GET["action"] == "historial_clap" || 
+					  	      $_GET["action"] == "informacion_clap") {
+							  $enlaces = "Clap"; 
+				  } else if ($_GET["action"] == "pago_usuario" || 
+				  $_GET["action"] == "agua_usuario" || 
+				  $_GET["action"] == "gas_usuario" || 
+					$_GET["action"] == "clap_usuario") {
+				  $enlaces = "Usuario"; 
+	                     }                    
+					
+					else{
 						$enlaces = "login";;
 					}
 				}else{

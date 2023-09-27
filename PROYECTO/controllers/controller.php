@@ -11,9 +11,9 @@
 		/*INTERACCION CON LAS PAGINAS*/
 
 		public function enlacesPaginasController(){
-			
+	
 			if (isset($_GET["action"])) {
-				$enlaces = $_GET["action"];
+				$enlaces = $_GET["action"]; 
 			}else{
 				$enlaces = "index";
 			}
@@ -253,6 +253,40 @@
 				echo "<p>Llene todas las casillas</p>";
 			}
 		}
+
+		public function pagoController(){
+            
+			if($_POST){
+				if($_POST['Numero']!="" && $_POST['Tipo_pago']!="" && $_POST['Banco']!="")
+				{
+					
+						$banco=1;
+						$cedula=1;
+						$idOpcion=1;
+						$idpago=1;
+
+				
+					
+			$ref=4444;
+
+			$stmt = Conexion::conectar()->prepare("INSERT INTO pago ( referencia ) VALUES (':ref')");		
+			$stmt-> bindParam(":ref", $ref , PDO::PARAM_INT);
+			$stmt->execute();
+
+		
+			
+		
+			
+				}else if (isset($_POST["boton"])){
+					echo "<p>Llene todas las casillas</p>";
+				}
+			
+
+			}
+           
+        }
+
+
 
 		public function familiasController(){
 			
