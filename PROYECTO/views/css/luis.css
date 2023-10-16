@@ -1,0 +1,20 @@
+:root{
+    --color-fondo: rgb(247,244,251);
+    --color-fondo-2: rgb(201, 196,233);
+    --color-borde: rgb(50, 109, 124);
+    --color-boton: rgb(113,122,185 );
+    --color-sombra: rgb(174, 168, 189);
+    --color-cabeza-tabla: rgb(139, 146, 204);
+    --color-cuerpo-tabla: rgb(169, 174, 209);
+  }
+
+
+thead td{
+    background-color: var(--color-cabeza-tabla);
+    
+}
+
+tbody td{
+    background-color: var(--color-cuerpo-tabla);
+}
+
