@@ -1,0 +1,72 @@
+*{
+ 	padding: 0px;
+ 	margin: 0px;
+}
+
+body{
+ 	background: url("fondo.jpg") no-repeat center center fixed;
+ 	background-size: cover;
+}
+
+ #formulario{
+	padding: 30px 50px;
+	background-color: rgb(238,238,238);
+	border: solid 5px rgb(255,087,087);
+	border-radius: 55px;	
+	margin: 12.5% 35% 0 35%;
+	box-shadow: 0px 0px 5px ;
+	min-width: 250px;
+	min-height: 250px;	
+}
+
+input{
+ 	border: solid 1px black;
+ 	padding: 10px;
+ 	margin: 15px 0;
+ 	background: #ededed;
+ 	width: 90%;
+}
+
+.boton{
+ 	background: rgb(255,087,087);
+ 	color: #ededed;
+ 	width: 50%;
+ 	padding: 5px 10px;
+ 	border: solid 1px rgb(255,087,087);
+ 	cursor: pointer;
+}
+
+.boton:hover{
+	background: #ededed;
+ 	color: rgb(255,087,087);
+ 	border: solid 1px rgb(255,087,087);
+ 	box-shadow: 0 0 5px rgb(255,087,087);
+}
+ 
+#cajaBoton{
+ 	text-align: center;
+}
+
+#formulario h2{
+ 	text-align: center;
+ 	margin-bottom: 5%;
+}
+
+#master{
+	margin-top: 10px;
+	padding: 20px;
+}
+
+p{
+	text-align: center;
+	padding: 5px;
+	background-color: rgb(255,087,087);
+	color: #fff;
+	font-size: 20px;
+	margin-top: 30px;
+	box-shadow: 0 0 5px #000;
+}
+
+label{
+	font-size: 16px;
+}
